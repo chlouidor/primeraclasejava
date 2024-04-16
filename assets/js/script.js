@@ -9,6 +9,8 @@ let btnEnviar = document.getElementById("btnEnviar");
 
 let nombreV = "";
 let apellidoV = "";
+let edadV = "";
+let correoV = "";
 
 
 btnEnviar.addEventListener("click", function(e){
@@ -46,10 +48,9 @@ if (correoV ===""){
          }
 else
 error1.innerHTML = "";
-    console.log('nombre: $(nombreV), apellido: $(apellidoV), edad: $(edadV), correo:$(correoV)  ');
-    console.log(object);
 
 
-
+    console.log('datos ingresados');
+    console.log('nombre completo:  '+nombreV  +apellidoV ,'edad: '+edadV, 'correo: ' +correoV) ;
 
 });
