@@ -3,6 +3,7 @@ import { sumar,restar,multiplicar,dividir } from "./operaciones.js";
 let numero1 = document.getElementById ("num1");
 let numero2 =document.getElementById ("num2");
 let resultado=document.getElementById("resultado");
+let textoResultado =document.getElementById("textoresultado");
 let btnsumar=document.getElementById("btnsumar");
 let btnrestar=document.getElementById("btnrestar");
 let btnmultiplicar=document.getElementById("btnmultiplicar");
@@ -92,7 +93,7 @@ btnmultiplicar.addEventListener("click", function(e){
 
 btndividir.addEventListener("click", function(e){
             e.preventDefault();
-            
+
             let resFinal="0"
             error1.innerHTML= "";
             
@@ -109,7 +110,8 @@ btndividir.addEventListener("click", function(e){
             }
             res = dividir (numero1.value,numero2.value);
             
-            resFinal= `el resultado es ${res}`;
+            textoResultado = 'el resultado es: ';
+            resFinal= `${textoResultado} ${res}`;
             resultado.innerHTML=resFinal;
             resultado.style.color ="violet";
             resultado.style.backgroundColor="black";
