@@ -1,13 +1,13 @@
-import { sumar,restar,multiplicar,dividir } from "./operaciones";
+import { sumar,restar,multiplicar,dividir } from "./operaciones.js";
 
-let numero1 = document.getElementById (num1);
-let numero2 =document.getElementById (num2);
-let resultado=document.getElementById(resultado);
-let btnsumar=document.getElementById(btnsumar);
-let btnrestar=document.getElementById(btnrestar);
-let btnmultiplicar=document.getElementById(btnmultiplicar);
-let btndividir=document.getElementById(btndividir);
-let error1 = document.getElementById(error1)
+let numero1 = document.getElementById ("num1");
+let numero2 =document.getElementById ("num2");
+let resultado=document.getElementById("resultado");
+let btnsumar=document.getElementById("btnsumar");
+let btnrestar=document.getElementById("btnrestar");
+let btnmultiplicar=document.getElementById("btnmultiplicar");
+let btndividir=document.getElementById("btndividir");
+let error1 = document.getElementById("error1");
 
 let numero1V=0;
 let numero2V=0;
@@ -29,10 +29,12 @@ if (numero2.value ===""){
     error1.style.color = "red";
     return;
 }
-res = sumar (n1.value,n2.value);
+res = sumar (numero1.value,numero2.value);
 
 resultado.innerHTML=res;
-resultador.style.color ="cyan"
+resultado.style.color ="cyan";
+resultado.style.backgroundColor="black";
+resultado.style.borderRadius="0.4rem";
 
 })
 
@@ -52,10 +54,12 @@ btnrestar.addEventListener("click", function(e){
         error1.style.color = "red";
         return;
     }
-    res = restar (n1.value,n2.value);
+    res = restar (numero1.value,numero2.value);
     
     resultado.innerHTML=res;
-    resultador.style.color ="red"
+    resultado.style.color ="red"
+    resultado.style.backgroundColor="black";
+    resultado.style.borderRadius="0.4rem";
     
     })
 
@@ -75,10 +79,12 @@ btnmultiplicar.addEventListener("click", function(e){
             error1.style.color = "red";
             return;
         }
-        res = multiplicar (n1.value,n2.value);
+        res = multiplicar (numero1.value,numero2.value);
         
         resultado.innerHTML=res;
-        resultador.style.color ="greenyellow"
+        resultado.style.color ="greenyellow";
+        resultado.style.backgroundColor="black";
+        resultado.style.borderRadius="0.4rem";
         
         })
 
@@ -98,9 +104,12 @@ btndividir.addEventListener("click", function(e){
                 error1.style.color = "red";
                 return;
             }
-            res = dividir (n1.value,n2.value);
+            res = dividir (numero1.value,numero2.value);
             
             resultado.innerHTML=res;
-            resultador.style.color ="violet"
+            resultado.style.color ="violet";
+            resultado.style.backgroundColor="black";
+            resultado.style.borderRadius="0.4rem";
+           
             
             })
