@@ -9,8 +9,6 @@ let btnmultiplicar=document.getElementById("btnmultiplicar");
 let btndividir=document.getElementById("btndividir");
 let error1 = document.getElementById("error1");
 
-let numero1V=0;
-let numero2V=0;
 let res=0;
 
 btnsumar.addEventListener("click", function(e){
@@ -42,6 +40,7 @@ btnrestar.addEventListener("click", function(e){
     e.preventDefault();
 
     error1.innerHTML= "";
+    let resFinal=0;
     
     if (numero1.value ===""){
         error1.innerHTML ="Error, debe ingresar el primer numero"
@@ -56,7 +55,8 @@ btnrestar.addEventListener("click", function(e){
     }
     res = restar (numero1.value,numero2.value);
     
-    resultado.innerHTML=res;
+    resFinal= `el resultado es ${res}`;
+    resultado.innerHTML=resFinal;
     resultado.style.color ="red"
     resultado.style.backgroundColor="black";
     resultado.style.borderRadius="0.4rem";
@@ -67,6 +67,7 @@ btnmultiplicar.addEventListener("click", function(e){
         e.preventDefault();
 
         error1.innerHTML= "";
+        let resFinal=0;
         
         if (numero1.value ===""){
             error1.innerHTML ="Error, debe ingresar el primer numero"
@@ -80,8 +81,9 @@ btnmultiplicar.addEventListener("click", function(e){
             return;
         }
         res = multiplicar (numero1.value,numero2.value);
-        
-        resultado.innerHTML=res;
+
+        resFinal= `el resultado es ${res}`;
+        resultado.innerHTML=resFinal;
         resultado.style.color ="greenyellow";
         resultado.style.backgroundColor="black";
         resultado.style.borderRadius="0.4rem";
@@ -90,7 +92,8 @@ btnmultiplicar.addEventListener("click", function(e){
 
 btndividir.addEventListener("click", function(e){
             e.preventDefault();
-
+            
+            let resFinal="0"
             error1.innerHTML= "";
             
             if (numero1.value ===""){
@@ -106,7 +109,8 @@ btndividir.addEventListener("click", function(e){
             }
             res = dividir (numero1.value,numero2.value);
             
-            resultado.innerHTML=res;
+            resFinal= `el resultado es ${res}`;
+            resultado.innerHTML=resFinal;
             resultado.style.color ="violet";
             resultado.style.backgroundColor="black";
             resultado.style.borderRadius="0.4rem";
